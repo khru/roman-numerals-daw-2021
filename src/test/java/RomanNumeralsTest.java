@@ -57,4 +57,13 @@ public class RomanNumeralsTest {
     Assertions.assertEquals("The number must be positive", thrown.getMessage());
   }
 
+  @Test
+  public void given_a_zero_should_throw_an_exception() {
+    IllegalArgumentException thrown = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+      RomanNumerals.convert(-1);
+    });
+
+    Assertions.assertEquals("The number must be positive", thrown.getMessage());
+  }
+
 }
