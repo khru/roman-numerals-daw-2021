@@ -20,4 +20,8 @@ public class RomanNumeralsTest {
     assertEquals("III", RomanNumerals.convert(3));
   }
 
+  @Test
+  public void given_a_4_should_return_a_IV() {
+    assertEquals("IV", RomanNumerals.convert(4));
+  }
 }
