@@ -1,31 +1,21 @@
 public class RomanNumerals {
+  private static int[] NUMBERS = {10, 9, 5, 4, 1};
+  private static String[] SYMBOLS = {"X", "IX", "V", "IV", "I"};
+
   public static String convert(int number) {
     StringBuilder result = new StringBuilder();
 
-    if (number >= 10) {
-      result.append(appendCharacter("X", number / 10));
-      number %= 10;
+    for (int i = 0; i < NUMBERS.length; i++) {
+        result.append(appendSymbol(SYMBOLS[i], number / NUMBERS[i]));
+        number %= NUMBERS[i];
     }
-    if (number == 9) {
-      result.append("IX");
-      number -= 9;
-    }
-    if (number >= 5) {
-      result.append("V");
-      number -= 5;
-    }
-    if (number == 4) {
-      result.append("IV");
-      number -= 4;
-    }
-
-    return result.append(appendCharacter("I", number)).toString();
+    return result.toString();
   }
 
-  private static String appendCharacter(String character, int times) {
+  private static String appendSymbol(String symbol, int times) {
     StringBuilder result = new StringBuilder();
     for (int i = 0; i < times ; i++) {
-      result.append(character);
+      result.append(symbol);
     }
 
     return result.toString();
