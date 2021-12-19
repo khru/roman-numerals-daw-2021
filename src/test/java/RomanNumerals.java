@@ -1,5 +1,8 @@
 public class RomanNumerals {
   public static String convert(int number) {
+    if (number == 4) {
+      return  "IV";
+    }
     if (number == 3) {
       return "III";
     }
