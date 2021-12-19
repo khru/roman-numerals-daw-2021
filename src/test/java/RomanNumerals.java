@@ -2,15 +2,13 @@ public class RomanNumerals {
   public static String convert(int number) {
     StringBuilder result = new StringBuilder();
 
-    if (number == 19) {
-      return "XIX";
-    }
     if (number >= 10) {
       result.append("X");
       number -= 10;
     }
     if (number == 9) {
-      return "IX";
+      result.append("IX");
+      number -= 9;
     }
     if (number >= 5) {
       result.append("V");
