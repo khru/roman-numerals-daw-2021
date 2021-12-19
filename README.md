@@ -21,7 +21,7 @@ roman number. Examples:
 
 ## Public API exposed on the class
 ```java
-public String Convert(int amount)
+public String convert(int amount)
 ```
 
 [https://katalyst.codurance.com/roman-numerals](https://katalyst.codurance.com/roman-numerals)
