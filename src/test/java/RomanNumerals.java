@@ -4,11 +4,11 @@ public class RomanNumerals {
       return  "IV";
     }
 
-    String result = "";
+    StringBuilder result = new StringBuilder();
     for (int i = 0; i < number ; i++) {
-      result += "I";
+      result.append("I");
     }
 
-    return result;
+    return result.toString();
   }
 }
