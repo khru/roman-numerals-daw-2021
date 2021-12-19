@@ -3,7 +3,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class RomanNumerals {
-  private final static SortedMap<Integer, String> ROMAN_NUMERALS = new TreeMap<Integer, String>(
+  private final static SortedMap<Integer, String> ROMAN_NUMERALS = new TreeMap<>(
     Map.of(1,"I", 4, "IV", 5, "V", 9, "IX", 10, "X")).descendingMap();
 
   public static String convert(int number) {
