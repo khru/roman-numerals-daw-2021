@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -44,6 +46,15 @@ public class RomanNumeralsTest {
   })
   public void given_a_number_should_return_a_repeatable_number(int number, String expected) {
     assertEquals(expected, RomanNumerals.convert(number));
+  }
+
+  @Test
+  public void given_a_negative_number_should_throw_an_exception() {
+    IllegalArgumentException thrown = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+      RomanNumerals.convert(-1);
+    });
+
+    Assertions.assertTrue(thrown.getMessage().contains("Illegal Argument"));
   }
 
 }
