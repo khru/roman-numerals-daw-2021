@@ -1,13 +1,18 @@
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 public class RomanNumerals {
-  private static int[] NUMBERS = {10, 9, 5, 4, 1};
-  private static String[] SYMBOLS = {"X", "IX", "V", "IV", "I"};
+  private final static SortedMap<Integer, String> ROMAN_NUMERALS = new TreeMap<Integer, String>(
+    Map.of(1,"I", 4, "IV", 5, "V", 9, "IX", 10, "X")).descendingMap();
 
   public static String convert(int number) {
     StringBuilder result = new StringBuilder();
-
-    for (int i = 0; i < NUMBERS.length; i++) {
-        result.append(appendSymbol(SYMBOLS[i], number / NUMBERS[i]));
-        number %= NUMBERS[i];
+    for(Map.Entry<Integer,String> entry : ROMAN_NUMERALS.entrySet()) {
+      Integer decimalNumber = entry.getKey();
+      String symbol  = entry.getValue();
+      result.append(appendSymbol(symbol, number / decimalNumber));
+      number %= decimalNumber;
     }
     return result.toString();
   }
