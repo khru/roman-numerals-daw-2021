@@ -54,7 +54,7 @@ public class RomanNumeralsTest {
       RomanNumerals.convert(-1);
     });
 
-    Assertions.assertTrue(thrown.getMessage().contains("Illegal Argument"));
+    Assertions.assertEquals("The number must be positive", thrown.getMessage());
   }
 
 }
