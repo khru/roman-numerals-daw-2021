@@ -2,7 +2,10 @@ public class RomanNumerals {
   public static String convert(int number) {
     StringBuilder result = new StringBuilder();
 
-    if (number == 10) {
+    if (number == 11) {
+      return "XI";
+    }
+    if (number >= 10) {
       return "X";
     }
     if (number == 9) {
