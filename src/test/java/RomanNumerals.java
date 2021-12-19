@@ -9,8 +9,13 @@ public class RomanNumerals {
       return  "IV";
     }
 
-    for (int i = 0; i < number ; i++) {
-      result.append("I");
+    return result.append(appendCharacter("I", number)).toString();
+  }
+
+  private static String appendCharacter(String character, int times) {
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < times ; i++) {
+      result.append(character);
     }
 
     return result.toString();
