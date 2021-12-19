@@ -2,9 +2,6 @@ public class RomanNumerals {
   public static String convert(int number) {
     StringBuilder result = new StringBuilder();
 
-    if (number == 14) {
-      return "XIV";
-    }
     if (number >= 10) {
       result.append("X");
       number -= 10;
@@ -17,7 +14,8 @@ public class RomanNumerals {
       number -= 5;
     }
     if (number == 4) {
-      return  "IV";
+      result.append("IV");
+      number -= 4;
     }
 
     return result.append(appendCharacter("I", number)).toString();
