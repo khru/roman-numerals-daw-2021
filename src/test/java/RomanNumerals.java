@@ -3,8 +3,8 @@ public class RomanNumerals {
     StringBuilder result = new StringBuilder();
 
     if (number >= 10) {
-      result.append("X");
-      number -= 10;
+      result.append(appendCharacter("X", number / 10));
+      number %= 10;
     }
     if (number == 9) {
       result.append("IX");
