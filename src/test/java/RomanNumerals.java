@@ -3,12 +3,12 @@ public class RomanNumerals {
     if (number == 4) {
       return  "IV";
     }
-    if (number == 3) {
-      return "III";
+
+    String result = "";
+    for (int i = 0; i < number ; i++) {
+      result += "I";
     }
-    if (number == 2) {
-      return "II";
-    }
-    return "I";
+
+    return result;
   }
 }
