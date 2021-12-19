@@ -75,4 +75,9 @@ public class RomanNumeralsTest {
     assertEquals("XIX", RomanNumerals.convert(19));
   }
 
+  @Test
+  public void given_a_20_should_return_a_XX() {
+    assertEquals("XX", RomanNumerals.convert(20));
+  }
+
 }
