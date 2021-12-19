@@ -29,4 +29,10 @@ public class RomanNumeralsTest {
   public void given_a_5_should_return_a_V() {
     assertEquals("V", RomanNumerals.convert(5));
   }
+
+  @Test
+  public void given_a_6_should_return_a_VI() {
+    assertEquals("VI", RomanNumerals.convert(6));
+  }
+
 }
