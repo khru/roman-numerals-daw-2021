@@ -7,7 +7,7 @@ public class RomanNumerals {
     Map.of(1,"I", 4, "IV", 5, "V", 9, "IX", 10, "X")).descendingMap();
 
   public static String convert(int number) {
-    if (number < 0) {
+    if (number <= 0) {
       throw new IllegalArgumentException("The number must be positive");
     }
     StringBuilder result = new StringBuilder();
