@@ -19,4 +19,10 @@ roman number. Examples:
 
 ![numbers](https://i.ibb.co/5vsZBbh/numeros-romanos.png)
 
+## Public API exposed on the class
+```java
+public String Convert(int amount)
+```
+
+[https://katalyst.codurance.com/roman-numerals](https://katalyst.codurance.com/roman-numerals)
 
